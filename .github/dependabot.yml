@@ -1,6 +1,6 @@
 version: 2
 updates:
   - package-ecosystem: "terraform"
-    directory: "/"          # Location of your versi
+    directory: "/"          # Location of your vers
     schedule:
       interval: "daily"  

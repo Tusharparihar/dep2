@@ -1,9 +1,10 @@
+# versions.tf
 terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      # This constraint allows any version >= 2.0.0 but strictly < 3.0.0
-      version = ">= 2.0.0, < 4.46.1" 
+      # This locks you into the v3.x.x series
+      version = ">= 3.0.0, < 4.0.0" 
     }
   }
 }

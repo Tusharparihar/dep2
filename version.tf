@@ -3,6 +3,6 @@ terraform {
 }
 
 provider "azurerm" {
-  version = ">= 3.80.0, < 4.45.0"  # manual cap
+  version = ">= 3.80.0, < 4.0.0"   # manual cap
   features {}
 }

@@ -4,7 +4,7 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       # This locks you into the v3.x.x series
-      version = ">= 3.0.0, < 4.0.0" 
+      version = ">= 3.0.0, < 4.46.1" 
     }
   }
 }

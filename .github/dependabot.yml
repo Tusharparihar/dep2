@@ -7,5 +7,4 @@ updates:
     # Specify the directory where your Terraform files are locat
     directory: "/" 
     schedule:
-      # Check for updates daily
       interval: "daily"

@@ -3,5 +3,5 @@ terraform {
 }
 
 provider "azurerm" {
-  version = ">= 3.80.0, < 3.85.0"  # Small range for testing n-2
+  version = "= 3.80.0"
 }

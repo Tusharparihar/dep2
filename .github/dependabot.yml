@@ -1,6 +1,25 @@
+# Configuration for Dependabot version updates
+
 version: 2
 updates:
+  # Configure updates for Terraform providers and modules
   - package-ecosystem: "terraform"
-    directory: "/"          # Location of your vers
+    # Specify the directory where your Terraform files are located
+    directory: "/" 
     schedule:
-      interval: "daily"  
+      # Check for updates daily
+      interval: "daily"
+      
+    # This is the crucial section for enforcing the N-2 rule.
+    # We explicitly ignore major version updates for 'hashicorp/azurerm'.
+    # This means Dependabot will NOT open a PR for 4.x -> 5.x.
+    ignore:
+      - dependency-name: "hashicorp/azurerm"
+        update-types:
+          # Ignore all major version bumps (e.g., 4.x.x to 5.0.0)
+          - "version-update:semver-major"
+
+    # We can also ignore all updates for specific dependencies if they are
+    # particularly sensitive and require manual review every time:
+    # - dependency-name: "hashicorp/aws"
+    #   update-types: ["all"]

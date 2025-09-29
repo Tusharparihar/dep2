@@ -1,6 +1,10 @@
+# Configuration for Dependabot version updates
+
 version: 2
 updates:
+  # Configure updates for Terraform providers and modules
   - package-ecosystem: "terraform"
-    directory: "/"          # Location of your vers
+    # Specify the directory where your Terraform files are locat
+    directory: "/" 
     schedule:
-      interval: "daily"  
+      interval: "daily"
